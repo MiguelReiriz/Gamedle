@@ -1,0 +1,7 @@
+com\springboot\gamedle\controller\GameController.class
+com\springboot\gamedle\entity\Game.class
+com\springboot\gamedle\service\GameService.class
+com\springboot\gamedle\GamedleApplication.class
+com\springboot\gamedle\dto\GameDTO.class
+com\springboot\gamedle\repository\IGameRepository.class
+com\springboot\gamedle\controller\RequestController.class

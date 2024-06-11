@@ -1,0 +1,25 @@
+<h2>Game List</h2>
+<table class = "table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Compañia</th>
+            <th>Fecha Lanzamiento</th>
+            <th>Plataforma</th>
+            <th>Genero</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+           <tr *ngFor= "let game of games">
+            <td>{{game.nombre}}</td>
+            <td>{{game.compania}}</td>
+            <td>{{game.ano_lanzamiento}}</td>
+            <td>{{game.plataforma}}</td>
+            <td>{{game.generos}}</td>
+        </tr>
+    </tbody>
+
+        
+    
+</table>
