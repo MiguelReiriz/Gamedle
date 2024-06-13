@@ -2,6 +2,7 @@ package com.springboot.gamedle.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import com.springboot.gamedle.dto.GameDTO;
 import org.bson.types.ObjectId;
@@ -22,6 +23,11 @@ public class GameService {
     
     public List<Game> getAll(){
         return gameRepository.findAll();
+    }
+    public List<String> getAllnombre() {
+        return gameRepository.findAllNombre().stream()
+                .map(Game::getNombre)
+                .collect(Collectors.toList());
     }
 
     public Optional<Game> getOneById(ObjectId _id){
@@ -51,6 +57,7 @@ public class GameService {
         gameRepository.delete(game);
         return game;
     }
+
 
 
 }

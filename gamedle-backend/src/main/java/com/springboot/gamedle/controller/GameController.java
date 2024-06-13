@@ -23,6 +23,10 @@ public class GameController {
     public ResponseEntity<List<Game>> getAll(){
         return ResponseEntity.ok(gameService.getAll());
     }
+    @GetMapping("/AllNames")
+    public List<String> getAllnombre(){
+        return gameService.getAllnombre();
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<Game> getOne(ObjectId _id){
