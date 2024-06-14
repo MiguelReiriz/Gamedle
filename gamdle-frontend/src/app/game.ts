@@ -1,8 +1,8 @@
 export class Game {
     
-    name:string;
-    company:string;
-    release_date:number;
-    platform:string;
-    genre:string;
+    nombre: string;
+    compania:string;
+    ano_lanzamiento:number;
+    plataforma:string;
+    generos:string;
 }
