@@ -1,0 +1,31 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    position: relative;
+    top: 20%;
+  }
+  
+  .search-bar {
+    position: relative;
+    width: 400px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+  }
+  
+  .search-bar .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: #ccc;
+  }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 
+
+
 @Component({
   selector: 'app-game-play',
   templateUrl: './game-play.component.html',
@@ -8,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamePlayComponent implements OnInit{
 
+  
+  
   constructor() { }
   ngOnInit(): void {
-    
+   
+ 
    }
-  
+ 
 }
