@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable, map, tap } from 'rxjs';
 import { Game } from './game';
 
 @Injectable({
@@ -14,13 +14,13 @@ export class GameService {
 
   constructor(private httpClient : HttpClient) { }
   //Metodo obtener juegos
-  getGames():Observable<Game[]>{
-    return this.httpClient.get<Game[]>(`${this.baseURL}`);
+  getGames(): Observable<Game[]> {
+    return this.httpClient.get<Game[]>(`${this.baseURL}`).pipe(
+      tap(dato => console.log('Datos recibidos:', dato))
+    );
   }
   getNames(): Observable<string[]> {
-    return this.httpClient.get<Game[]>(this.NamesURL).pipe(
-      map((games: Game[]) => games.map(game => game.name).filter(name => name !== undefined))
-    );
+    return this.httpClient.get<string[]>(this.NamesURL);
   }
  
 }

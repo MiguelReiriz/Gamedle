@@ -1,31 +1,64 @@
 .search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-    position: relative;
-    top: 20%;
-  }
-  
-  .search-bar {
-    position: relative;
-    width: 400px;
-  }
-  
-  .search-bar input {
-    width: 100%;
-    padding: 10px 10px 10px 40px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    outline: none;
-  }
-  
-  .search-bar .search-icon {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    font-size: 15px;
-    color: #ccc;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  position: relative;
+  top: 20%;
+}
+/*
+Gracias chatgtp y jorge por hacer posible esto <3
+*/
+.search-bar {
+  position: relative;
+  width: 400px; /* Incrementa el ancho de la barra de búsqueda */
+}
+
+.search-bar mat-form-field {
+  width: 100%;
+  margin: 0;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px 8px 8px 40px; /* Hace que la barra sea más fina */
+  font-size: 16px;
+  border: none; /* Elimina los bordes */
+  border-radius: 25px;
+  outline: none;
+  background-color: #fff; /* Establece el color de fondo blanco */
+  color: #333; /* Color del texto dentro de la barra */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+}
+
+.search-bar input::placeholder {
+  color: #ccc; /* Color del placeholder */
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  top: 40%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #ccc;
+}
+
+/* Ajustes adicionales para autocompletar */
+.mat-autocomplete-panel {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.mat-option {
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.mat-option:hover {
+  background-color: #e0e0e0;
+}
+
+.mat-option.mat-active {
+  background-color: #d0d0d0;
+}

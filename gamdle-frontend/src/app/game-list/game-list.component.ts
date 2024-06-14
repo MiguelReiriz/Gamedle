@@ -16,11 +16,16 @@ export class GameListComponent implements OnInit{
   ngOnInit(): void {
     this.getGames();
    }
-   private getGames(){
-    this.gameService.getGames().subscribe(dato =>{
-      this.games = dato;
-    })
-   }
+   private getGames() {
+  this.gameService.getGames().subscribe(
+    data => {
+      this.games = data;
+      console.log(this.games); // Verifica los datos aquí
+    }
+  );
+}
+
+     
 
 
   }
