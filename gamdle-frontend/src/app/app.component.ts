@@ -1,4 +1,6 @@
+import { GameService } from './game.service';
 import { Component } from '@angular/core';
+import { Game } from './game';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'gamdle-frontend';
-}
+  games:Array<Game> = [];
+  
+  constructor(private gameService: GameService){
+
+  }
+
+
+  }
+

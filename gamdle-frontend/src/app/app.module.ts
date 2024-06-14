@@ -7,19 +7,30 @@ import {HttpClientModule} from '@angular/common/http';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameMainComponent } from './game-main/game-main.component';
 import { GamePlayComponent } from './game-play/game-play.component';
-
+import {MatInputModule} from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SearchBarComponent } from './search-bar/search-bar.component'; 
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameListComponent,
     GameMainComponent,
-    GamePlayComponent
-  ],
+    GamePlayComponent,
+    SearchBarComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatSlideToggleModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
